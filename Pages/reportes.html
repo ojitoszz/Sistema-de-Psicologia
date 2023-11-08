@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes de Citas</title>
+    <!-- Enlace a Bootstrap para estilos -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Enlace a Chart.js para gráficos -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+    <link rel="stylesheet" href="../Css/styleReportes.css">
+</head>
+<body>
+
+
+
+    <div class="col-lg-12 ">
+        <header>
+        <div class="cabezera">
+            <img src="https://tesoem.edomex.gob.mx/themes/seitheme3/logo.svg" alt="Logo">
+        </div>
+        </header> 
+    <div class="container mt-5">
+        <h1>Reportes de Citas</h1>
+        
+        <!-- Formulario de Filtro -->
+        <form id="filtroForm">
+            <!-- Selección de Psicólogo -->
+            <div class="form-group">
+                <label for="psicologo">Selecciona un Psicólogo:</label>
+                <select id="psicologo" class="form-control">
+                    <!-- Opciones de psicólogos cargadas dinámicamente desde PHP -->
+                </select>
+            </div>
+            
+            <!-- Selección de Mes -->
+            <div class="form-group">
+                <label for="mes">Selecciona un Mes:</label>
+                <select id="mes" class="form-control">
+                    <!-- Opciones de meses cargadas dinámicamente desde PHP -->
+                </select>
+            </div>
+            
+            <!-- Botón de Filtrar -->
+            <button type="submit" class="btn btn-primary">Filtrar</button>
+        </form>
+        
+        <!-- Gráfica de Pastel General -->
+        <div class="mt-5">
+            <h2>Gráfica General</h2>
+            <canvas id="graficaGeneral" width="400" height="200"></canvas>
+        </div>
+        
+        <!-- Gráficas de Pastel por Carrera -->
+        <div class="mt-5">
+            <h2>Gráficas por Carrera</h2>
+            <div id="graficasCarreras" class="row">
+                <!-- Gráficas de pastel por carrera se cargarán dinámicamente aquí -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Enlace a tu archivo JavaScript personalizado -->
+    <script src="../javascript/repoprtes.js"></script>
+
+    </div>
+</body>
+</html>

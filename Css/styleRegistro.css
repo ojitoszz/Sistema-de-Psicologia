@@ -1,0 +1,23 @@
+.cabezera{
+    text-align: center;
+    background-color:whitesmoke;
+
+    }
+    .title{
+        text-align: center;
+        font-size: 27px;
+
+    }
+    .agregar {
+        width: 100px; /* Cambia el ancho según tus preferencias */
+        height: 100px; /* Cambia la altura según tus preferencias */
+    }
+    
+
+
+.img {
+    width: 30%; 
+    height: 100px; 
+    
+}
+

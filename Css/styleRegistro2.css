@@ -1,0 +1,15 @@
+
+
+/* Establece el contorno verde para el input y fondo blanco */
+.form-control-in {
+    background-color: white; /* Fondo blanco */
+    border: 2px solid #4CAF50; /* Contorno verde */
+}
+
+/* Establece el fondo verde solo en el hover */
+.form-control-in:hover {
+    background-color: white; /* Fondo blanco en hover */
+    border: 2px solid #45A745; /* Contorno verde en hover */
+}
+
+

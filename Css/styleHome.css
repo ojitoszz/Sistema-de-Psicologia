@@ -1,0 +1,36 @@
+.cabezera{
+text-align: center;
+background-color: whitesmoke;
+}
+.Title{
+text-align: center ;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size:3rem ;
+}
+.custom-card-size {
+    width: 300px;
+    height: 300px;
+  }
+  
+  
+  .cierre {
+    position: fixed;
+    bottom: 10px; /* Ajusta la distancia desde abajo según tus preferencias */
+    right: 10px; /* Ajusta la distancia desde la derecha según tus preferencias */
+    z-index: 999; /* Asegura que esté por encima de otros elementos */
+  }
+
+  /* Estilos para el icono */
+  .cierre img {
+    width: 100px; /* Ajusta el tamaño del icono según tus preferencias */
+    height: auto; /* Mantén la proporción de aspecto */
+  }
+
+  .card2 {
+    width: 18rem;
+    margin: 17px;
+    transition: transform 0.2s;
+  }
+  .card2:hover {
+    transform: scale(1.05); /* Escala la tarjeta al 105% del tamaño original */
+  }

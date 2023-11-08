@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="icon" href="../../Images/Alumnos/psi.png">
+
+    <link rel="stylesheet" href="../../Css/styleEstudiante.css">
+    <title>Inicio de Sesion</title>
+  </head>
+  <body class="bg-dark">
+    <section>
+        <div class="row g-0">
+            <div class="col-lg-7 d-none d-lg-block">
+              <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active img-1 min-vh-100">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Sitema de control de psicologia</h5>
+                      <p>by Devop. Joel Uriel Arias Reyes</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item img-2 min-vh-100">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Se pone cranky si lo hago romantic</h5>
+                      <p>Candy Perreo</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item img-3 min-vh-100">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Ella es la sensación del bloque</h5>
+                      <p>Una morenna tan linda cuado ella camina </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item img-4 min-vh-100">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Manten tu corazon ardiendo y supera tus limites </h5>
+                      <p>kyojuto Rengoku  </p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="col-lg-5 d-flex flex-column aling-items-end ">
+                <div class="px-lg5 pt-lg-4 pb-lg-3 p-4 w-100 mb-auto">
+
+                    <img src="../../Images/tesoem.png" class="img-fluid">
+                </div >
+
+                <div class="px-lg-5 py-lg-4 p-4 w-100 align-self-center">
+                    <h1 class="font-weigth-bold mb-2">Registrate</h1>
+                    <form action="../../back/alumno.php" method = "POST" id="validacion">
+                        <div class="mb-4">
+                            <label for="exampleInputEmail1" class="form-label font-weigth-bold">Nombre(s)</label>
+                            <input type="text" class="form-control bg-dark-x border-0" placeholder="Ingresa tu usuario" id="exampleInputNombre" aria-describedby="nombreError" name="usuario">
+                            <small id="nombreError" class="form-text text-danger d-none">El nombre no debe contener números ni exceder los 50 caracteres</small>
+                             
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <label for="exampleInputPassword1" class="form-label font-weight-bold">Primer Apellido</label>
+                                    <input type="text" class="form-control bg-dark-x border-0" placeholder="Ingresa tu primer apellido" id="exampleInputPassword1" name="pApellido">
+                                    <small id="pApellidoError" class="form-text text-danger d-none">El apellido no debe contener números ni exceder los 25 caracteres</small>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="exampleInputEmail1" class="form-label font-weight-bold">Segundo Apellido</label>
+                                    <input type="text" class="form-control bg-dark-x border-0" placeholder="Ingresa tu segundo apellido" id="exampleInputEmail1" name="sApellido">
+                                    <small id="sApellidoError" class="form-text text-danger d-none">El apellido no debe contener números ni exceder los 25 caracteres</small>
+                                </div>
+                            </div>
+                            
+                        <div class="row mb-4">
+
+                            <div class="col-md-6">
+                                <label for="exampleInputEmail1" class="form-label font-weight-bold">Matrícula</label>
+                                <input type="text" class="form-control bg-dark-x border-0" placeholder="Ingresa tu matrícula" id="errorm" name="matricula">
+                                <small id="matriculaError" class="form-text text-danger d-none">La matrícula no debe tener más de 9 dígitos ni contener espacios, letras ni símbolos especiales</small>
+                            </div>
+
+
+                            <div class="col-md-6">
+                              <label for="validationDefault04" class="form-label font-weight-bold">Género</label>
+                              <select class="form-select" id="validationDefault04" required name="genero">
+                                <option selected disabled value="">Elige...</option>
+                                <option>Masculino</option>
+                                <option>Femenino</option>
+                                <option>No binario</option>
+                                <option>Prefiero no especificar</option>
+                              </select>
+                            </div>
+                        </div>                           
+                          <div class="row mb-4">
+                            <div class="col-md-6">
+                              <label for="exampleInputGroup" class="form-label font-weight-bold">Grupo</label>
+                              <input type="text" class="form-control bg-dark-x border-0" placeholder="Ingresa el grupo" id="exampleInputGroup" name="grupo">
+                                <small id="grupoError" class="form-text text-danger d-none">El grupo no debe contener caracteres especiales ni espacios y no debe exceder los 4 caracteres</small>
+
+                            </div>
+                            
+                            <div class="col-md-6 ">
+                              <label for="carreraSelect" class="form-label font-weight-bold">Carrera</label>
+                              <select class="form-select bg-dark-x border-0 " id="carreraSelect" name="carrera">
+                                  <option value="Elige...">Elige...</option>
+                                  <option value="Ambiental">Ambiental</option>
+                                  <option value="Administracion">Administración</option>
+                                  <option value="Contabilidad">Contabilidad</option>
+                                  <option value="EnergiaRenovables">Energía Renovables</option>
+                                  <option value="Gastronomia">Gastronomía</option>
+                                  <option value="Industrial">Industrial</option>
+                                  <option value="SistemasAutomotrices">Sistemas Automotrices</option>
+                                  <option value="Sistemas">Sistemas</option>
+                              </select>
+                          </div>
+                          </div>
+                          
+                          <div class="row mb-4">
+                            <div class="col-md-6 ">
+                              <label for="exampleInputEmail5" class="form-label font-weigth-bold">Ingresa tu numero celular</label>
+                              <input type="text" class="form-control bg-dark-x border-0" placeholder="Ingresa tu usuario"  name="celular">
+
+                            </div>
+                          <div class="col-md-6">
+                            <label for="psicologoSelect" class="form-label font-weight-bold">Elige un Psicólogo</label>
+                            <select class="form-select bg-dark-x border-0" id="psicologoSelect" name="psicologo">
+                                <!-- Opciones de psicólogos cargadas dinámicamente desde PHP -->
+                                <option value="opciones">Elige uno ...</option>
+                                <option value="Psicologo1">Psicólogo 1</option>
+                                <option value="Psicologo2">Psicólogo 2</option>
+                            
+                               
+                            </select>
+                        </div>
+                      
+
+                      </div>
+                        <button type="submit" class="btn btn-primary w-100" id="boton">Generar Cita</button>
+                      </form>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="../../javascript/alumnos.js"></script>
+  </body>
+</html>

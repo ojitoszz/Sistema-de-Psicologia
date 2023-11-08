@@ -1,0 +1,85 @@
+:root {
+  --dark: #16191c;
+  --dark-x: #1e2126;
+  --ligth: #ffffff;
+}
+body {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 300;
+  color: var(--ligth);
+}
+
+.bg-dark {
+  background-color: var(--dark) !important;
+}
+
+.bg-dark-x {
+  background-color: var(--dark-x) !important;
+}
+
+.form-control,
+.btn {
+  min-height: 3.125rem;
+  line-height: initial;
+}
+
+.img-1 {
+  background-image: url("../Images/Alumnos/4.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.img-2 {
+  background-image: url("../Images/Alumnos/2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.img-3 {
+  background-image: url("../Images/Alumnos/3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.img-4 {
+  background-image: url("../Images/Alumnos/4.jpg");
+  background-size: cover;
+  background-position: center;
+}
+/* ... Otros estilos ... */
+
+/* Cambia el color del texto del input en todos los momentos, incluso mientras se escribe */
+.form-control,
+.btn {
+  min-height: 3.125rem;
+  line-height: initial;
+  color: var(--light); /* Color del texto del input (blanco) */
+}
+
+
+
+/* Cambia el fondo del input cuando está en foco */
+.form-control:focus {
+  background-color: var(--ligth); /* Cambia este valor para el color de fondo deseado cuando está en foco */
+  color: white; /* Cambia este valor para el color del texto cuando está en foco (negro) */
+}
+/* ... Otros estilos ... */
+
+/* Estilos para el select de género */
+.form-select {
+  background-color: var(--dark-x);
+  color: var(--ligth);
+}
+
+/* Cambia el color del texto del input en todos los momentos, incluso mientras se escribe */
+.form-control,
+.btn {
+  min-height: 3.125rem;
+  line-height: initial;
+  color: var(--ligth); /* Color del texto del input (blanco) */
+}
+
+/* Cambia el fondo del input cuando está en foco */
+.form-control:focus {
+  background-color: var(--ligth); /* Cambia este valor para el color de fondo deseado cuando está en foco */
+  color: white; /* Cambia este valor para el color del texto cuando está en foco (negro) */
+}

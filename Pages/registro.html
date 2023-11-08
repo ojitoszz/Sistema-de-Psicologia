@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.12.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="../Css/styleRegistro.css">
+    <title>Registro de Usuarios</title>
+</head>
+<body>
+    <header>
+        <div class="cabezera">
+            <img src="../Images/nuev.svg" class="img">
+        </div>
+    </header>
+
+    <h1 class="title">Sistema de Control de Alumnos</h1>
+    
+    <section>
+        <div class="container">
+            <form class="row g-3" action="../back/registro.php" method="POST" id="buscarFormularioAlumno">
+                <div class="col-md-4">
+                    <label for="validationDefault01" class="form-label">Ingresa la Matrícula</label>
+                    <input type="text" class="form-control" id="validationDefault01" required name="matricula">
+                </div>
+                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                    <input type="button" id="buscarAlumno" value="Buscar">
+                </div>
+            </form>
+
+            <div id="resultado" class="d-none">
+                <h2>Datos del alumno</h2>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-condensed">
+                        <tbody>
+                            <tr>
+                                <th scope="row">Nombres:</th>
+                                <td><span id="nombres"></span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Segundo Apellido:</th>
+                                <td><span id="segundoApellido"></span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Género:</th>
+                                <td><span id="genero"></span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Matrícula:</th>
+                                <td><span id="matricula"></span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Grupo:</th>
+                                <td><span id="grupo"></span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Carrera:</th>
+                                <td><span id="carrera"></span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Psicólogo:</th>
+                                <td><span id="psicologo"></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="actividadesSection" class="d-none">
+            <h1>Actividades</h1>
+    
+            <div class="table-responsive2">
+                <table class="table table-bordered table-condensed">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Actividades:</th>
+                            <td><span id="listaActividades"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+            <form action="../back/registro.php" method="POST">
+                <div class="input-group mt-2">
+                    <input type="text" class="form-control-in" id="actividad" placeholder="Agrega una Actividad" name="actividad1">
+                    <input type="submit">
+                </div>
+            </form>
+    
+            <div class="table-responsive2">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Padecimientos:</th>
+                            <td><span id="listaPadecimientos"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+            <form action="../back/registro.php" method="POST">
+                <div class="input-group mt-2">
+                   <select name="actividad2">
+                    <option>seleccione..</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                   </select>
+                    <input type="submit">
+                </div>
+            </form>
+    
+            <div class="table-responsive2">
+                <table class="table table-bordered table-condensed">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Observaciones:</th>
+                            <td><span id="listaObservaciones"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+            <form action="../back/registro.php" method="POST">
+                <div class="input-group mt-2">
+                    <input type="text" class="form-control-in" id="observaciones" placeholder="Agrega una Observación" name="actividad3">
+                    <input type="submit">
+                </div>
+            </form>
+        </div>
+    </section>
+
+<section>
+
+<h1>agenda</h1>
+
+<div class="table-responsive3">
+    <table class="table table-bordered table-condensed" id="agenda-table">
+        <tbody>
+            <tr>
+                <th scope="row">Historial de citas:</th>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</section>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function () {
+    $("#buscarAlumno").click(function () {
+        var matricula = $("#validationDefault01").val();
+        $.ajax({
+            url: '../back/registro.php', 
+            method: 'POST',
+            data: { matricula: matricula },
+            dataType: 'json',
+            success: function (data) {
+                if (data.alumno) {
+                    $("#nombres").text(data.alumno.Nombres);
+                    $("#segundoApellido").text(data.alumno.SegundoApellido);
+                    $("#genero").text(data.alumno.Género);
+                    $("#matricula").text(data.alumno.Matrícula);
+                    $("#grupo").text(data.alumno.Grupo);
+                    $("#carrera").text(data.alumno.Carrera);
+                    $("#psicologo").text(data.alumno.Psicólogo);
+                    $("#resultado").removeClass("d-none");
+                    if (data.agenda) {
+                        data.agenda.forEach(function (cita) {
+                            var row = $("<tr>");
+                            var inicioCell = $("<td>").text(cita.inicio_normal);
+                            row.append(inicioCell);
+                            $("#agenda-table tbody").append(row);
+                        });
+                    }
+                }
+                if (data.actividades) {
+                    $("#listaActividades").text(data.actividades.join(", "));
+                }
+                if (data.padecimientos) {
+                    $("#listaPadecimientos").text(data.padecimientos.join(", "));
+                    $("#actividadesSection").removeClass("d-none");
+                }
+                if (data.observaciones) {
+                    $("#listaObservaciones").text(data.observaciones.join(", "));
+                    $("#actividadesSection").removeClass("d-none");
+                }
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>
